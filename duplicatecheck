@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(int argc, string argv[])
+{
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        char duplicates = argv[1][i];
+        //Puts the cursor forward so it doesn't trip on itself
+        i++;
+        if (argv[1][i] == duplicates)
+        {
+            printf("Usage: ./substitution key\n");
+            return 1;
+        }
+        //Sets the cursor back a space, since it was pushed forward once already. The for loop at the beginning will take care of pushing it one step forward on re-loop.
+        i--;
+}
